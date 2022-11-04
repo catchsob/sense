@@ -30,8 +30,8 @@ def distance(trigger, echo):
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-e', '--echo', type=int, default=17, help='number of ECHO pin, default 17')
-parser.add_argument('-t', '--trigger', type=int, default=27, help='number of TRIGGER pin, default 27')
+parser.add_argument('-e', '--echo', type=int, required=True, help='number of ECHO pin')
+parser.add_argument('-t', '--trigger', type=int, required=True, help='number of TRIGGER pin')
 args = parser.parse_args()
 
 import RPi.GPIO as GPIO
